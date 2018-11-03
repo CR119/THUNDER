@@ -2,7 +2,7 @@
 
 ## VARIABLES
 THIS_DIR=$(cd "$(dirname "$0")"; pwd)
-
+TDCLI='https://valtman.name/files/telegram-cli-1222'
 
 ## Print Colorful
 # Print text in red
@@ -20,7 +20,14 @@ prtbrown() {
 
 # install Bot
 
- 
+      prtgrn "
+ >> Fetching $TDCLI
+"
+      wget "$TDCLI" -O TG
+      chmod +x TG
+      prtgrn "
+ ➡[ @koora16 ] 
+"
       sudo apt-get -y update && sudo apt-get -y upgrade 
       prtgrn "
  ➡[ @koora16 ] 
